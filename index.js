@@ -100,7 +100,9 @@ app.post("/api/getcurrency", (req, res) => {
 
     }
 
-    GetCountryCode(req.body.country)
+    //GetCountryCode(req.body.country)
+    res.send("Hola Mundo")
+
 
 });
 
