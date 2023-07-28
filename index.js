@@ -9,6 +9,10 @@ app.get("/", (req, res) => {
     res.send("conectado");
 });
 
+app.get("/api/getcurrency", (req, res) => {
+    res.send("Probando")
+})
+
 app.post("/api/getcurrency", (req, res) => {
 
     const url = 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso';
