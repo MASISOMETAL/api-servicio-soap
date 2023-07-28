@@ -112,9 +112,7 @@ app.post("/api/getcurrency", (req, res) => {
 
     }
 
-    //GetCountryCode(req.params.country)
-    res.send(`El pais es ${req.body.country}`)
-
+    GetCountryCode(req.body.country)
 
 });
 
