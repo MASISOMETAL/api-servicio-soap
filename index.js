@@ -1,9 +1,17 @@
 import express from "express";
 import axios from "axios";
 import xml2js from "xml2js";
+import cors from "cors"
 
 const app = express();
 app.use(express.json());
+
+const corsOptions = {
+    origin: '*', // Sustituye con el dominio que deseas permitir
+    optionsSuccessStatus: 200 // Algunos navegadores requieren esto para aceptar la respuesta CORS
+  };
+
+app.use(cors(corsOptions))
 
 app.get("/", (req, res) => {
     res.send("conectado");
