@@ -104,5 +104,5 @@ app.post("/api/getcurrency", (req, res) => {
 
 });
 
-const port = process.env.port || 80;
+const port = process.env.port || 3100;
 app.listen(port, () => console.log(`Escuchando en el puerto ${port}...`)); 
