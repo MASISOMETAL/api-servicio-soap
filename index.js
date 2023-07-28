@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
     res.send("conectado");
 });
 
-app.post("/api/getcurrency", (req, res) => {
+app.post("/api/:country", (req, res) => {
 
     const url = 'http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso';
 
@@ -100,8 +100,8 @@ app.post("/api/getcurrency", (req, res) => {
 
     }
 
-    //GetCountryCode(req.body.country)
-    res.send("Hola Mundo")
+    //GetCountryCode(req.params.country)
+    res.send(`este es el ${req.params.country}`)
 
 
 });
